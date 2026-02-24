@@ -1,0 +1,54 @@
+# 原有基础规则：排除所有隐藏文件，仅保留.gitignore和.gitkeep
+.*
+!.gitignore
+!*.gitkeep
+
+# 新增：排除IDE工作空间配置文件夹（核心修改）
+.metadata/
+
+# 样式/文档类文件
+*.css
+*.chm
+
+# 编译/工程临时文件
+*.bak
+*.ddk
+*.edk
+*.lst
+*.lnp
+*.mpf
+*.mpj
+*.obj
+*.omf
+*.opt  # 修正：原内容是 "l *.opt"，多余的l已删除
+*.plg 
+*.rpt 
+*.tmp 
+*.__i 
+*.crf 
+*.o 
+*.d 
+*.axf 
+*.tra 
+*.dep          
+
+# 调试/日志文件
+JLinkLog.txt
+*.iex
+
+# 工程输出文件
+*.htm
+*.sct
+*.map
+*.hex
+
+# Project文件夹规则：仅保留.uvprojx工程文件
+Project/*
+!Project/*.uvprojx
+#!Project/Objects
+#!Project/Listings
+
+# Doc文件夹规则：仅保留doxyfile配置文件
+Doc/*
+!Doc/doxyfile
+#!Doc/html/doc.chm
